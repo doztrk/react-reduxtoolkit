@@ -1,0 +1,5 @@
+.dark,
+.dark *{
+    background-color: black !important;
+    color: rgb(219, 211, 211) !important;
+}
