@@ -1,12 +1,10 @@
 import React from "react";
-import { StoreProvider } from "./store";
-import { Counter } from "./component/counter";
+
 import { AppRouter } from "./router";
+import { useSelector } from "react-redux";
 
 export const App = () => {
-	return (
-		<StoreProvider>
-			<AppRouter />
-		</StoreProvider>
-	);
+	const lang = useSelector((state) => state.locale.lang);
+
+	return <AppRouter key={lang.code} />;
 };

@@ -2,6 +2,8 @@ import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { ThemeSwitcher } from "./theme-switcher";
+import { LangSwitcher } from "./lang-switcher";
+import { $t } from "../helpers/locale-helper";
 
 export const Header = () => {
 	return (
@@ -12,21 +14,22 @@ export const Header = () => {
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="mx-auto">
 						<Nav.Link to="/" as={Link}>
-							Home
+							{$t("home")}
 						</Nav.Link>
 						<Nav.Link to="/about" as={Link}>
-							About
+							{$t("about")}
 						</Nav.Link>
 						<Nav.Link to="/blog" as={Link}>
-							Blog
+							{$t("blog")}
 						</Nav.Link>
 						<Nav.Link to="/contact" as={Link}>
-							Contact
+							{$t("contact")}
 						</Nav.Link>
 					</Nav>
-                    
-					<div>
+
+					<div className="d-flex flex-column gap-2 flex-lg-row align-items-lg-center">
 						<ThemeSwitcher />
+						<LangSwitcher />
 					</div>
 				</Navbar.Collapse>
 			</Container>

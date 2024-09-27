@@ -1,9 +1,6 @@
-import React from 'react'
+import React from "react";
+import { $t } from "../helpers/locale-helper";
 
 export const HomePage = () => {
-  return (
-    <div>
-        Welcome to REDUX APP
-    </div>
-  )
-}
+	return <div>{$t("homepage-highlight-text")}</div>;
+};
